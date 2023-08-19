@@ -2,27 +2,24 @@
 
 # Haversine
 
-Package haversine is a Go library which implements the haversine formula. The 
-haversine formula gives great-circle distances between two points on a sphere 
-from their longitudes and latitudes. The sphere in this case is the surface of 
+Package haversine is a Go library which implements the haversine formula. The
+haversine formula gives great-circle distances between two points on a sphere
+from their longitudes and latitudes. The sphere in this case is the surface of
 the Earth.
 
 ![Earth great circle](https://i.imgur.com/iD3X3Ax.png)
 
-*The dotted yellow line is an arc of a great circle. It gives the shortest 
+*The dotted yellow line is an arc of a great circle. It gives the shortest
 distance between the two yellow points. Image courtesy USGS.*
 
 # Installation
 
-> go get github.com/umahmood/haversine
+> go get github.com/piusalfred/haversine
 
-> cd $GOPATH/src/github.com/umahmood/haversine/
-
-> go test -v ./...
 
 # Usage
 
-The below example shows how to calculate the shortest path between two 
+The below example shows how to calculate the shortest path between two
 coordinates on the surface of the Earth.
 
     package main
@@ -30,7 +27,7 @@ coordinates on the surface of the Earth.
     import (
         "fmt"
 
-        "github.com/umahmood/haversine"
+        "github.com/piusalfred/haversine"
     )
 
     func main() {
@@ -42,7 +39,7 @@ coordinates on the surface of the Earth.
 
 # Documenation
 
-> http://godoc.org/github.com/umahmood/haversine
+> http://godoc.org/github.com/piusalfred/haversine
 
 # References
 

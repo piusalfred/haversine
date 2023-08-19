@@ -9,7 +9,7 @@ coordinates on the surface of the Earth.
     import (
         "fmt"
 
-        "github.com/umahmood/haversine"
+        "github.com/piusalfred/haversine"
     )
 
     func main() {

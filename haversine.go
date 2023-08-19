@@ -24,6 +24,26 @@ func degreesToRadians(d float64) float64 {
 // of the Earth. This function returns two units of measure, the first is the
 // distance in miles, the second is the distance in kilometers.
 func Distance(p, q Coord) (mi, km float64) {
+	c := distance(p,q)
+
+	mi = c * earthRadiusMi
+	km = c * earthRaidusKm
+
+	return mi, km
+}
+
+func DistanceInMiles(p,q Coord)float64{
+	c := distance(p,q)
+	return c * earthRadiusMi
+}
+
+func DistanceInKilometers(p,q Coord)float64{
+	c := distance(p,q)
+	return c * earthRaidusKm
+}
+
+
+func distance(p,q Coord)float64{
 	lat1 := degreesToRadians(p.Lat)
 	lon1 := degreesToRadians(p.Lon)
 	lat2 := degreesToRadians(q.Lat)
@@ -37,8 +57,5 @@ func Distance(p, q Coord) (mi, km float64) {
 
 	c := 2 * math.Atan2(math.Sqrt(a), math.Sqrt(1-a))
 
-	mi = c * earthRadiusMi
-	km = c * earthRaidusKm
-
-	return mi, km
+	return c
 }
